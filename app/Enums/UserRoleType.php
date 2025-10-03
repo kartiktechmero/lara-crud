@@ -8,6 +8,8 @@ enum UserRoleType: string
     case ADMIN = 'admin';
     case EMPLOYEE = 'employee';
 
+    case OWNER = 'owner';
+
     public static function getAllRoles(): array
     {
         return self::cases();
