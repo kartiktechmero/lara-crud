@@ -32,3 +32,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::prefix('owner')->name('owner.')->middleware(['auth', 'role:owner'])->group(function () {
+    require __DIR__.'/owner/owner.php';
+});
